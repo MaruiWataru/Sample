@@ -12,7 +12,7 @@
       - run:
           name: Check image
           command: docker image ls
-      -run:
+      - run:
           name: Tag
           command: docker tag sample mynginx
       - run:
