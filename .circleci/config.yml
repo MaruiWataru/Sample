@@ -17,5 +17,5 @@
           command: docker login -u ${UserName} -p ${Password}
       - run:
           name: Pull image
-          command: docker push mynginx
+          command: docker pull mynginx
           
