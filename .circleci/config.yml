@@ -14,7 +14,7 @@
           command: docker image ls
       - run:
           name: Docker Login
-          command: docker login --username=${UserName} --password-stdin=${Password}
+          command: docker login --username=${UserName} --password=${Password}
       - run:
           name: Pull image
           command: docker pull sample
