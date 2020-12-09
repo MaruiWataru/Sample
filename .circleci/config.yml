@@ -14,7 +14,7 @@
           command: docker image ls
       - run:
           name: Docker Login
-          command: docker login -u marui_wataru -p cool585858
+          command: docker login -u ${UserName} -p ${PassWord}
       - run:
           name: Pull image
           command: docker pull mynginx
