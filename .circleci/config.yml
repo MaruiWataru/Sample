@@ -7,7 +7,6 @@
       - checkout
       - setup_remote_docker
       - run:
-          name: Build image
           command: docker build -t sample .
           command: docker push sample
       - run:
