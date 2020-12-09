@@ -7,6 +7,11 @@
       - checkout
       - setup_remote_docker
       - run:
+          name: Build image
           command: docker build -t mynginx .
       - run:
-          command: docker image ls     
+          name: Check image
+          command: docker image ls
+      - run:
+          name: Run image
+          command: docker run -d mynginx
