@@ -13,9 +13,6 @@
           name: Check image
           command: docker image ls
       - run:
-          name: Docker Login
-          command: docker login --username=${UserName} --password=${Password}
-      - run:
-          name: Pull image
+          name: Push image
           command: docker push sample
           
