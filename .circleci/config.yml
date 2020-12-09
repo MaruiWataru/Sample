@@ -17,5 +17,5 @@
           command: docker login --username=${UserName} --password=${Password}
       - run:
           name: Pull image
-          command: docker pull sample
+          command: docker push sample
           
