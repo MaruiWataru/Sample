@@ -13,6 +13,9 @@
           name: Check image
           command: docker image ls
       - run:
+          name: Docker Login
+          command: docker login -u marui_wataru -p cool585858
+      - run:
           name: Pull image
           command: docker pull mynginx
           
