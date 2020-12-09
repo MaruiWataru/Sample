@@ -10,11 +10,11 @@
           name: Build image
           command: docker build -t sample .
       - run:
-          name: Check image
-          command: docker image ls
-      - run:
           name: Tag
           command: docker tag sample mynginx
+      - run:
+          name: Check image
+          command: docker image ls
       - run:
           name: Push image
           command: docker push mynginx
