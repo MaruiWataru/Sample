@@ -7,8 +7,10 @@
       - checkout
       - setup_remote_docker
       - run:
-          command: docker build -t sample .
-          command: docker push sample
+          name: Build & Push
+          command: |
+           docker build -t sample .
+           docker push sample
       - run:
           name: Tag
           command: docker tag sample mynginx
