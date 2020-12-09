@@ -13,5 +13,6 @@
           name: Check image
           command: docker image ls
       - run:
-          name: Run image
-          command: docker run -d mynginx
+          name: Pull image
+          command: docker pull mynginx
+          
