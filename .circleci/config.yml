@@ -16,9 +16,10 @@
           name: Check image
           command: docker image ls
       - run:
-          name: Run image
-          command: docker run -d sample
+          name: Run Container
+          command: docker container run --rm -p 8000:80 -d sample
+
       - run:
-          name: Run image
-          command: docker ps -aqf "ancestor=sample"
+          name: LocalHost
+          command: curl localhost
            
