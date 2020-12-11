@@ -3,6 +3,7 @@
    build:
     docker:
        - image: docker:18.03.0-ce-git
+       - image: cimg/ruby:2.7.1-node
     steps: 
       - checkout
       - setup_remote_docker
@@ -18,9 +19,6 @@
       - run:
           name: Run Container
           command: docker container run --rm -p 8000:80 -d sample
-
-      - run: 
-          command: sudo apt-get install mongodb-clients
 
       - run:
           name: LocalHost
