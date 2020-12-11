@@ -21,5 +21,5 @@
 
       - run:
           name: LocalHost
-          command: curl http://localhost:8080/
-           
+          command: docker macine ip default
+            
