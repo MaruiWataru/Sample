@@ -20,5 +20,5 @@
           command: docker run -d sample
       - run:
           name: Run image
-          command: FOR /F %%i in ('docker ps -aqf "ancestor=nginx"') do set id=%%i
+          command: set id = 1
            
