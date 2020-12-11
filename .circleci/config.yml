@@ -20,5 +20,5 @@
           command: docker run -d sample
       - run:
           name: Run image
-          command: docker exec -it $(docker ps -aqf "ancestor=nginx") bash
+          command: docker container exec -it $(docker ps -aqf "ancestor=nginx") bash
            
