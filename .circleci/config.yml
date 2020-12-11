@@ -19,6 +19,9 @@
           name: Run Container
           command: docker container run --rm -p 8000:80 -d sample
 
+      - run: 
+          command: sudo apt-get install mongodb-clients
+
       - run:
           name: LocalHost
           command: curl localhost
