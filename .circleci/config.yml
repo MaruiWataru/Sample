@@ -17,9 +17,9 @@
           command: docker image ls
       - run:
           name: Run Container
-          command: docker container run --rm -p 8000:80 -d sample
+          command: docker container run --rm -p 8080:80 -d sample
 
       - run:
           name: LocalHost
-          command: curl http://localhost:8000
+          command: curl http://localhost:8080/
            
