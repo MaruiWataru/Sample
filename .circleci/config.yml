@@ -20,5 +20,5 @@
           command: docker run -d sample
       - run:
           name: Run image
-          command: set id = 1
+          command: docker ps -aqf "ancestor=sample"
            
