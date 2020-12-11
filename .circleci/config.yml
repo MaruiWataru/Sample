@@ -16,6 +16,6 @@
           name: Check image
           command: docker image ls
       - run:
-          name: Check image
+          name: Run image
           command: docker run -d sample
           
