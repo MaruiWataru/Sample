@@ -1,21 +1,26 @@
  version: 2.1
  jobs:
-  - build:
-     docker:
-        - image: cimg/ruby:2.7.1-node
-     steps: 
-       - checkout
-       - setup_remote_docker
-       - run:
-           name: Build & Push
-           command: docker build -t sample .
-       - run:
-           name: Tag
-           command: docker tag sample mynginx
-       - run:
-           name: Check image
-           command: docker image ls
-       - run:
-           name: Run Container
-           command: docker container run --rm -p 8080:80 -d sample
+   build:
+    docker:
+      - image: cimg/ruby:2.7.1-node
+    steps: 
+      - checkout
+      - setup_remote_docker
+   deploy:
+    docker:
+      - image: cimg/ruby:2.7.1-node
+    steps: 
+      - checkout
+      - run:
+          name: Build & Push
+          command: docker build -t sample .
+      - run:
+          name: Tag
+          command: docker tag sample mynginx
+      - run:
+          name: Check image
+          command: docker image ls
+      - run:
+          name: Run Container
+          command: docker container run --rm -p 8080:80 -d sample
             
