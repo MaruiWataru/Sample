@@ -1,6 +1,6 @@
  version: 2.1
  jobs:
-   build:
+  -build:
     docker:
        - image: cimg/ruby:2.7.1-node
     steps: 
@@ -18,8 +18,4 @@
       - run:
           name: Run Container
           command: docker container run --rm -p 8080:80 -d sample
-
-      - run:
-          name: LocalHost
-          command: ruby my_address.rb
             
